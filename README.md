@@ -4,7 +4,9 @@ A simple and secure Notes Application built using Flutter, Firebase Authenticati
 Cloud Firestore, and GetX. The app supports user authentication, real-time note
 management, and internet connectivity handling.
 
+==================================================
 FEATURES
+==================================================
 - Firebase Authentication (Login & Register)
 - Auto login using AuthGate
 - Create, Edit, Delete Notes
@@ -13,7 +15,9 @@ FEATURES
 - GetX state management and routing
 - Material 3 UI
 
+==================================================
 PROJECT STRUCTURE
+==================================================
 lib/
  auth/
   - login_page.dart
@@ -32,12 +36,18 @@ lib/
  services/
  main.dart
 
+==================================================
 APP FLOW
-- App starts with AuthGate
+==================================================
+- App launches with AuthGate
+- AuthGate listens to Firebase auth state
 - If user is logged in -> NotesPage
 - If user is logged out -> LoginPage
+- User session persists until logout
 
+==================================================
 TECH STACK
+==================================================
 - Flutter
 - Firebase Core
 - Firebase Authentication
@@ -45,27 +55,52 @@ TECH STACK
 - GetX
 - Material 3
 
-SETUP
-1. Clone repository
-2. Run flutter pub get
-3. Configure Firebase (Android & iOS)
-4. Enable Email/Password Authentication
-5. Run flutter run
+==================================================
+SETUP STEPS
+==================================================
 
+1. Install Flutter
+   https://flutter.dev/docs/get-started/install
+
+2. Clone the repository
+   git clone https://github.com/your-username/noteapp.git
+   cd noteapp
+
+3. Install dependencies
+   flutter pub get
+
+4. Firebase Setup
+   - Create a Firebase project
+   - Enable Email/Password Authentication
+   - Enable Cloud Firestore
+   - Add Firebase config files:
+     - Android: google-services.json
+     - iOS: GoogleService-Info.plist
+
+5. Configure Firebase with FlutterFire
+   flutterfire configure
+
+6. Run the app
+   flutter run
+
+==================================================
 FIREBASE COLLECTIONS
+==================================================
 
 users:
-- fullName
-- email
-- createdAt
-- isActive
+- fullName (String)
+- email (String)
+- createdAt (Timestamp)
+- isActive (Boolean)
 
 notes:
-- title
-- content
-- createdAt
-- userId
+- title (String)
+- content (String)
+- createdAt (Timestamp)
+- userId (String)
 
+==================================================
 AUTHOR
+==================================================
 Sharda Prasad
 Senior Mobile Developer (Flutter | iOS | SwiftUI)
