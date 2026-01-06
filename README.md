@@ -97,6 +97,7 @@ users
   "createdAt": "timestamp",
   "isActive": true
 }
+
 notes
 {
   "title": "Note title",
@@ -122,6 +123,7 @@ Android API 21+
 iOS 12+
 
 🧑‍💻 Author
+
 Sharda Prasad
 Senior Mobile Developer (Flutter | iOS | SwiftUI)
 📧 Email: shardaprasad1111@gmail.com
